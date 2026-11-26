@@ -76,3 +76,16 @@
 .profile-popover>button{width:100%;justify-content:flex-start;gap:9px}.profile-popover>button.profile-logout{border-top:1px solid #edf1f6;border-radius:0;margin-top:5px;padding-top:13px;color:#b34c58}
 @media(max-width:650px){.header-popover{right:-45px;width:min(300px,calc(100vw - 28px))}.intro-bottom-line{left:16px;right:16px;font-size:7px;letter-spacing:1px}.intro-skip-top{right:18px;top:20px}.intro-actions{flex-direction:column;gap:13px}.intro-copy h1{letter-spacing:-3px}}
 @media(prefers-reduced-motion:reduce){.intro-grid-glow,.intro-orbit,.intro-logo-mark,.intro-copy,.intro-actions{animation:none!important;transition:none!important}}
+
+/* CivicQ identity: supplied violet lightning mark and cinematic welcome */
+.brand-mark,.public-logo{background:#f2eaff!important;color:#7037e8!important;border:1px solid #e4d5ff;box-shadow:0 8px 22px #7140c51c}
+.brand-mark svg,.public-logo svg{display:block}
+.intro-logo-mark{background:linear-gradient(145deg,#fff,#f2eaff)!important;color:#7138e8!important;border:1px solid #ffffffaa!important;box-shadow:0 0 0 14px #ffffff0d,0 24px 90px #020e25a8!important}
+.intro-logo-mark svg{filter:drop-shadow(0 5px 12px #7437e855)}
+.intro-actions{gap:12px;flex-wrap:wrap;justify-content:center}
+.intro-enter{min-width:150px;justify-content:center}
+.intro-signin{background:#ffffff16;color:#fff;border:1px solid #ffffff66;backdrop-filter:blur(10px)}
+.intro-signin:hover{background:#ffffff28}
+.intro-skip{border:1px solid #ffffff35;background:transparent;color:#d8e7fb;border-radius:12px;height:48px;padding:0 18px;font-size:12px;font-weight:700}
+.intro-skip:hover{background:#ffffff12}
+@media(max-width:580px){.intro-actions{width:100%;padding:0 18px}.intro-actions button{width:100%}}

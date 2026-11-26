@@ -111,7 +111,8 @@ function Admin(){return <><div className="feature-grid"><FeatureCard icon={Build
 export default App
 
 
-type PublicPage = 'Home' | 'About CivicQ' | 'Services' | 'How it works' | 'Departments' | 'Track a request' | 'Help centre' | 'Contact'type DemoUser = { name: string; email: string; password: string }
+type PublicPage = 'Home' | 'About CivicQ' | 'Services' | 'How it works' | 'Departments' | 'Track a request' | 'Help centre' | 'Contact'
+type DemoUser = { name: string; email: string; password: string }
 function CivicQMark({size=22}:{size?:number}) { return <svg width={size} height={size} viewBox="0 0 40 40" role="img" aria-label="CivicQ logo"><defs><linearGradient id="civicq-bolt" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stopColor="#c34cff"/><stop offset="100%" stopColor="#5936e8"/></linearGradient></defs><path d="M10 5.5h22l-5.1 8.2H36L13.4 35l4.1-14.1H5.5L10 5.5Z" fill="url(#civicq-bolt)" stroke="#7c3aed" strokeWidth=".6" strokeLinejoin="round"/></svg> }
 function Intro({onRegister,onSignin,onEnter}:{onRegister:()=>void,onSignin:()=>void,onEnter:()=>void}) {
  const [phase,setPhase]=useState(0)

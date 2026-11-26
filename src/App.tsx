@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useState, type FormEvent } from 'react'
 import {
   Activity, ArrowDownRight, ArrowUpRight, Bell, Bot, Building2, CalendarDays,
   CheckCircle2, ChevronDown, ChevronRight, CircleHelp, ClipboardList, Clock3,
@@ -92,7 +92,7 @@ function PublicHome({onLogin,onExplore}:{onLogin:()=>void,onExplore:()=>void}) {
 }
 function Login({onBack,onLogin}:{onBack:()=>void,onLogin:()=>void}) {
  const [email,setEmail]=useState(''); const [password,setPassword]=useState(''); const [error,setError]=useState('');
- const submit=(e:React.FormEvent)=>{e.preventDefault();if(!email.trim()||!password.trim()){setError('Enter your email and password to continue.');return}setError('');onLogin()};
+ const submit=(e:FormEvent)=>{e.preventDefault();if(!email.trim()||!password.trim()){setError('Enter your email and password to continue.');return}setError('');onLogin()};
  return <div className="login-page"><div className="login-left"><button className="login-back" onClick={onBack}><ArrowRight size={15}/> Back to CivicQ</button><div className="login-brand"><div className="brand-mark"><Waves size={23}/></div><div><strong>CivicQ</strong><span>PUBLIC SERVICE PLATFORM</span></div></div><div className="login-message"><span className="hero-kicker"><ShieldCheck size={15}/> ONE CONNECTED SERVICE WORKSPACE</span><h1>Welcome back<br/>to <em>CivicQ.</em></h1><p>Access the tools that help public-service teams respond, coordinate and serve citizens more effectively.</p><div className="login-points"><span><CheckCircle2/> Grievance management</span><span><CheckCircle2/> Digital queue operations</span><span><CheckCircle2/> Service verification</span></div></div><small className="login-copyright">© 2026 CivicQ · Demonstration platform</small></div><div className="login-right"><form className="login-card" onSubmit={submit}><div className="login-card-icon"><LockKeyhole size={23}/></div><span className="eyebrow">SECURE WORKSPACE ACCESS</span><h2>Sign in to your account</h2><p>Enter your credentials to continue to the CivicQ control centre.</p><label>Email address</label><div className="login-input"><Mail size={17}/><input type="email" value={email} onChange={e=>setEmail(e.target.value)} placeholder="name@department.gov" /></div><label>Password</label><div className="login-input"><LockKeyhole size={17}/><input type="password" value={password} onChange={e=>setPassword(e.target.value)} placeholder="Enter your password"/></div>{error&&<div className="login-error">{error}</div>}<button className="button primary login-submit" type="submit">Sign in <ArrowRight size={16}/></button><div className="login-demo-note"><ShieldCheck size={15}/><span><b>Prototype sign-in</b><small>This is a frontend demonstration. Authentication will be connected to a secure backend later.</small></span></div><button className="login-back-mobile" type="button" onClick={onBack}>Return to home</button></form></div></div>
 }
 
